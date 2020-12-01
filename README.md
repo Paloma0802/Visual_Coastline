@@ -1,6 +1,44 @@
 # Visual_Coastline
 
-To do:
+## 项目内容
+
+Codes是代码目录
+
+data文件夹存放与数据读取相关的代码
+
+Utils文件夹存放 中值模糊、聚类、canny等其它数据处理方法
+
+使用时还需要创建两个目录：Data，Result，这两个文件夹与Codes并列，分别用于存放原始数据与处理结果。
+
+其中Data目录下请放入  【从国家地理云上下载的压缩文件直接解压后的文件夹】  无需更改文件夹名称与TIF文件名称
+
+【Utils里的代码不可以在main文件中直接import！！！它们目前只是调包，还没有写成类或函数的形式】
+
+##GeoData使用方法
+
+data文件夹下定义了一个叫做GeoData的数据类，它可以像其它库一样被import，包含两个初始化参数：
+
+data_path : Data文件夹所在的绝对路径
+
+Band: 需要使用的数据波段，默认为B5，使用时可以不显式指定
+
+初始化GeoData之后，它会从Data目录下读入所有满足波段条件的TIF文件，并生成对应的时间标签。
+
+调用GeoImgs中的getImages()方法，可以返回从Data目录读入的图片文件（未切割）。这些图片以dict的形式组织到一起，用对应的时间标签作为key可以获得特定时间的图片。
+
+调用GeoImgs中的subsetImages(W1, W2, H1, H2)方法，可以返回按指定行列号切割的图片，同样以dict形式返回，key是时间标签。W1, W2, H1, H2分别是列号和行号。
+
+以上两个函数不会将切割后的图片（或原始图片）写入png文件，需要自行CV2.imwrite（）
+
+建议在Codes目录下写主函数，如果在其它目录下编程且需要导入GeoData模块，则要加入如下代码:
+
+import sys
+
+sys.path.append('GeoData.py文件所在绝对路径')
+
+main.py可作为demo参考
+
+##To do:
 
 1、更改截取子图的方式，换成用地理坐标截取（现在是用array的行列号截取的）
 
