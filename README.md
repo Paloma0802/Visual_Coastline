@@ -14,7 +14,7 @@ Utils文件夹存放 中值模糊、聚类、canny等其它数据处理方法
 
 【Utils里的代码不可以在main文件中直接import！！！它们目前只是调包，还没有写成类或函数的形式】
 
-##GeoData使用方法
+## GeoData使用方法
 
 data文件夹下定义了一个叫做GeoData的数据类，它可以像其它库一样被import，包含两个初始化参数：
 
@@ -38,7 +38,7 @@ sys.path.append('GeoData.py文件所在绝对路径')
 
 main.py可作为demo参考
 
-##To do:
+## To do:
 
 1、更改截取子图的方式，换成用地理坐标截取（现在是用array的行列号截取的）
 
