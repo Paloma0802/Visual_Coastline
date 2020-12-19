@@ -2,7 +2,7 @@
 
 ## 项目内容
 
-Codes是代码目录
+coast_detection是代码目录
 
 data文件夹存放与数据读取相关的代码
 
