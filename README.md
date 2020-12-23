@@ -4,6 +4,8 @@
 
 coast_detection是代码目录
 
+main.py内构建了交互界面，把图像处理的过程嵌入到了交互界面中。
+
 data文件夹存放与数据读取相关的代码
 
 Utils文件夹存放各种数据处理和展示的方法，目前包括median_blur.py和coastline.py，后者定义了聚类、反转等绘制过程所需的函数。使用时可以单独import每个函数，实现所需的目的，也可以直接import coastline函数，该函数引用其它函数完成了完整的绘制流程，可以直接得到画好海岸线的图。
@@ -33,8 +35,6 @@ Band: 需要使用的数据波段，默认为B5，使用时可以不显式指定
 import sys
 
 sys.path.append('GeoData.py文件所在绝对路径')
-
-main.py可作为demo参考
 
 ## To do:
 
