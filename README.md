@@ -1,5 +1,15 @@
 # Visual_Coastline
 
+## Requirements
+
+rasterio  (for GeoData)
+
+numpy  sklearn  skimage  opencv  math  (for coastline detection)
+
+PyQt5  pyqtgraph (for GUI)
+
+
+
 ## 项目内容
 
 coast_detection是代码目录
