@@ -112,7 +112,6 @@ w4 = pg.PlotWidget(title="Dock 4 plot")
 w4.plot(np.random.normal(size=100))
 d4.addWidget(w4)
 
-
 w5 = pg.ImageView()
 w5.setImage(np.random.normal(size=(100,100)))
 d5.addWidget(w5)
@@ -121,11 +120,7 @@ w6 = pg.PlotWidget(title="Dock 6 plot")
 w6.plot(np.random.normal(size=100))
 d6.addWidget(w6)
 
-
-
 win.show()
-
-
 
 ## Start Qt event loop unless running in interactive mode or using pyside.
 if __name__ == '__main__':
