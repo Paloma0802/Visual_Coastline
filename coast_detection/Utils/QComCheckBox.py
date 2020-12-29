@@ -2,6 +2,10 @@ from PyQt5.QtWidgets import QComboBox, QLineEdit, QListWidgetItem, QListWidget, 
   QApplication, QVBoxLayout, QWidget
 import sys
 
+'''
+GUI：下拉复选按钮
+'''
+
 
 class ComboCheckBox(QComboBox):
 

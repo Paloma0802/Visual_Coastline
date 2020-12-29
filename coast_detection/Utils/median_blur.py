@@ -1,5 +1,8 @@
 import numpy as np
 
+'''
+中值模糊的实现
+'''
 
 def median_blur(img):
 
